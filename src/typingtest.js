@@ -18,13 +18,8 @@ function Typingtest(props) {
   const [counter, setCounter] = React.useState(60);
   const timerRef = useRef();
 
-  // const params = new URLSearchParams(useLocation().search);
-  // const time = params.get("time");
-
-  // const data = localStorage.getItem("time");
   const params = new URLSearchParams(useLocation().search);
   const time = params.get("time");
-  // console.log(data, "DATA");
 
   const countWords = (text) => {
     let str = text;
@@ -70,7 +65,6 @@ function Typingtest(props) {
             <div>
               <Timer
                 ref={timerRef}
-                // initialTime={60000 * Number(time)}
                 initialTime={60000 * Number(time)}
                 direction="backward"
                 startImmediately={false}
