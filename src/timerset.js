@@ -17,17 +17,21 @@ function Timerset() {
             <button className="text-black underline">Back</button>
           </Link>
         </div>
-        <div className="flex w-screen h-screen text-2xl justify-center items-center p-8 bg-gray-400">
-          {times.map((time) => (
-            <Link to={`/typingtest?time=${time}`}>
-              <button
-                // onClick={() => localStorage.setItem("time", time)}
-                className=" border p-4 rounded-full text-gray-800 shadow-2xl border-xl mr-4 border-blue-800 bg-white"
-              >
-                {time} Min Test
-              </button>
-            </Link>
-          ))}
+
+        <div className="w-screen h-screen text-2xl justify-center items-center p-8 bg-gray-400">
+          <div className="text-center m-10 font-bold text-3xl">Choose Time</div>
+          <div className="text-center">
+            {times.map((time) => (
+              <Link to={`/typingtest?time=${time}`}>
+                <button
+                  // onClick={() => localStorage.setItem("time", time)}
+                  className=" border p-4 rounded-full text-gray-800 shadow-2xl border-xl mr-4 border-blue-800 bg-white"
+                >
+                  {time} Min Test
+                </button>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </div>

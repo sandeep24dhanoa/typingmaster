@@ -9,6 +9,7 @@ import {
   StopTwoTone,
   ReloadOutlined,
   BorderOutlined,
+  PlayCircleOutlined,
 } from "@ant-design/icons";
 
 function Typingtest(props) {
@@ -56,11 +57,11 @@ function Typingtest(props) {
           </Link>
         </div>
         <div className="flex justify-center items-center rounded-lg">
-          <div className="p-10 bg-white rounded-full">
+          <div className="p-10 bg-white rounded-full text-lg">
             Word Count
             <div className="text-red-600">{countWords(words)}</div>
           </div>
-          <div className="p-10 px-16 m-10 bg-white rounded-full ">
+          <div className="p-10 px-16 m-5 bg-white text-lg rounded-full">
             Timer
             <div>
               <Timer
@@ -84,19 +85,19 @@ function Typingtest(props) {
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center">
-          <div>
-            <PlayCircleTwoTone
-              className="bg-blue-700 p-8 rounded-full"
+        <div className="flex justify-center ">
+          <div className="text-white">
+            <PlayCircleOutlined
+              className="bg-blue-700 p-8 rounded-full m-10 "
               type="button"
               onClick={() => {
                 timerRef.current.start();
               }}
             >
               Start
-            </PlayCircleTwoTone>{" "}
+            </PlayCircleOutlined>
           </div>
-          <div className="text-white">
+          <div className="text-white m-10">
             <ReloadOutlined
               className="bg-blue-700 p-8 rounded-full"
               type="button"
@@ -107,7 +108,7 @@ function Typingtest(props) {
               Reset
             </ReloadOutlined>{" "}
           </div>
-          <div className="text-white">
+          <div className="text-white m-10">
             <StopOutlined
               className="bg-blue-700 p-8 rounded-full"
               type="button"
